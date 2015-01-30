@@ -10,6 +10,26 @@
     1
     (+ (fib (1- n)) (fib (- n 2)))))
 
+(defun is-prime? (n)
+  (cond ((< n 2) nil)
+        ((= n 2) t)
+        (t  (let ((f (first (last (loop for i in (range (1+ (sqrt n)) :min 2)
+                                     until (zerop (rem n i))
+                                     collecting i)))))
+              (when f
+                (= f (truncate (1+ (sqrt n)))))))))
+
+(defun next-prime (n)
+  (if (< n 2)
+      2
+      (do ((i (1+ n) (1+ i)))
+          ((is-prime? i) i))))
+
+(defun prime-factors (n)
+  (loop for i in (range n :min 2)
+       when (and (zerop (rem n i)) (is-prime? i))
+       collecting i))
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;; http://www.chadbraunduin.com/2011/07/common-lisp-currying.html
 
