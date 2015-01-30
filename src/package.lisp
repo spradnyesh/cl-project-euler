@@ -2,5 +2,9 @@
 
 (defpackage #:cl-project-euler-src
   (:use #:cl)
-  ;(:export nil)
-  )
+  (:export :range
+           ;; prob001
+           :merge-without-duplicates
+           :multiples
+           :sum-multiples-below
+           :prob001))
