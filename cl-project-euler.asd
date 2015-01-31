@@ -21,6 +21,7 @@
                                      (:file "prob010" :depends-on ("utils"))
                                      (:file "prob011" :depends-on ("utils"))
                                      (:file "prob012" :depends-on ("utils"))
+                                     (:file "prob013" :depends-on ("utils"))
                                      (:file "prob036" :depends-on ("utils"))))
                (:module "test"
                         :components ((:file "package"))
