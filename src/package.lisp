@@ -31,4 +31,6 @@
            ;; prob011
            :grid :get-cell :right :down :diag-left :diag-right :m-get-cell :prob011
            ;; prob012
-           :triangle-number :prob012))
+           :triangle-number :prob012
+           ;; prob014
+           :next-collatz :collatz-seq :prob014))
