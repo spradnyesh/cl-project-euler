@@ -25,3 +25,6 @@
 
 (test base-10->k-string
   (is (equal "1001001001" (base-10->k-string 2 585))))
+
+(test square
+  (is (= 25 (square 5))))

@@ -38,6 +38,9 @@
   (let ((*print-base* k))
     (format nil "~a" n)))
 
+(defun square (n)
+  (* n n))
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;; http://www.chadbraunduin.com/2011/07/common-lisp-currying.html
 
