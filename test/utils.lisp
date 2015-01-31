@@ -32,6 +32,12 @@
 (test digits
   (is (equal '(1 2 3) (digits 123))))
 
+(test factors
+  (is (equal '(1 28 2 14 4 7) (factors 28))))
+
+(test triangle-number
+  (is (= 28 (triangle-number 7))))
+
 (test splice
   (and (multiple-value-bind (status lst)
            (splice nil)

@@ -4,7 +4,7 @@
   (:use #:cl #:org.tfeb.hax.memoize #:split-sequence)
   (:shadow cl:cdr cl:mapcar)
   (:export :range :fib :is-prime? :next-prime :primes-below :is-palindrome?
-           :base-10->k-string :square :digits :splice :partition
+           :base-10->k-string :square :digits :factors :splice :partition
            :cdr :delay :force :repeat :mapcar :lazy-range :partial :str
            ;; prob001
            :merge-without-duplicates :multiples :sum-multiples-below :prob001
@@ -29,4 +29,6 @@
            ;; prob010
            :prob010
            ;; prob011
-           :grid :get-cell :right :down :diag-left :diag-right :m-get-cell :prob011))
+           :grid :get-cell :right :down :diag-left :diag-right :m-get-cell :prob011
+           ;; prob012
+           :triangle-number :prob012))

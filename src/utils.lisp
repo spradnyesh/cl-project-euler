@@ -51,6 +51,14 @@
         (rslt (list (rem n 10)) (push (rem n 10) rslt)))
        ((< n 10) rslt)))
 
+(defun factors (n)
+  (apply #'append (loop for i from 1 upto (truncate (sqrt n))
+                     when (zerop (rem n i))
+                     collect (list i (/ n i)))))
+
+(defun triangle-number (n)
+  (reduce #'+ (range (1+ n) :min 1)))
+
 ;; https://github.com/spradnyesh/cl-web-utils/blob/master/src/list.lisp
 (defun splice (lst &key (from 0) (to (1- (length lst))))
   (if (and lst
