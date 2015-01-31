@@ -41,7 +41,7 @@
 (defun square (n)
   (* n n))
 
-(defun digitps (num)
+(defun digits (num)
   (do* ((n num (truncate (/ n 10)))
         (rslt (list (rem n 10)) (push (rem n 10) rslt)))
        ((< n 10) rslt)))
