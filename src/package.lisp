@@ -27,4 +27,6 @@
            ;; prob009
            :is-pythagorean-triplet? :triplet :prob009
            ;; prob010
-           :prob010))
+           :prob010
+           ;; prob011
+           :grid :get-cell :right :down :diag-left :diag-right :m-get-cell :prob011))
