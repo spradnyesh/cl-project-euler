@@ -12,4 +12,6 @@
            ;; prob003
            :largest-prime-factor :largest-prime-factor-clj
            ;; prob036
-           :palindrome-in-both? :dual-palindromes-less-than :prob036))
+           :palindrome-in-both? :dual-palindromes-less-than :prob036
+           ;; prob004
+           :prob004))
