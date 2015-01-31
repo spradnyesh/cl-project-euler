@@ -1,8 +1,5 @@
 (in-package #:cl-project-euler-test)
 
-(def-suite :prob001)
-(in-suite :prob001)
-
 (test merge-without-duplicates
   (is (equal '(1 2 3 4) (merge-without-duplicates '(1 1 2 2) '(2 2 3 3) '(3 3 4 4)))))
 
