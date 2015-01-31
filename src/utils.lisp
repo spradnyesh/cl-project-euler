@@ -30,6 +30,14 @@
        when (and (zerop (rem n i)) (is-prime? i))
        collecting i))
 
+(defun is-palindrome? (n)
+  (let ((str-n (str n)))
+    (equal str-n (reverse str-n))))
+
+(defun base-10->k-string (k n)
+  (let ((*print-base* k))
+    (format nil "~a" n)))
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;; http://www.chadbraunduin.com/2011/07/common-lisp-currying.html
 

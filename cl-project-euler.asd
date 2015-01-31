@@ -11,7 +11,8 @@
                                      (:file "utils" :depends-on ("package"))
                                      (:file "prob001" :depends-on ("utils"))
                                      (:file "prob002" :depends-on ("utils"))
-                                     (:file "prob003" :depends-on ("utils"))))
+                                     (:file "prob003" :depends-on ("utils"))
+                                     (:file "prob036" :depends-on ("utils"))))
                (:module "test"
                         :components ((:file "package"))
                         :depends-on ("src"))))
