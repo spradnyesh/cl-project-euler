@@ -22,5 +22,7 @@
            :prob006
            ;; prob007
            :prob007
-           ;; prob007
-           :n-1000 :prob008))
+           ;; prob008
+           :n-1000 :prob008
+           ;; prob009
+           :is-pythagorean-triplet? :triplet :prob009))
