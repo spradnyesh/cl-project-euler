@@ -25,6 +25,11 @@
       (do ((i (1+ n) (1+ i)))
           ((is-prime? i) i))))
 
+(defun primes-below (n)
+  (do* ((p 2 (next-prime p))
+        (acc '(2) (push p acc)))
+       ((>= p n) (rest acc))))
+
 (defun prime-factors (n)
   (loop for i in (range n :min 2)
        when (and (zerop (rem n i)) (is-prime? i))

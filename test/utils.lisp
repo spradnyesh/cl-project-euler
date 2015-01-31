@@ -16,6 +16,9 @@
   (and (is (= 2 (next-prime 1)))
        (is (= 3 (next-prime 2)))))
 
+(test primes-below
+  (is (equal '(7 5 3 2) (primes-below 10))))
+
 (test is-palindrome?
   (and (is-false (is-palindrome? 584))
        (is-true (is-palindrome? 585))))
@@ -27,7 +30,7 @@
   (is (= 25 (square 5))))
 
 (test digits
-  (is (equal '(1 2 3)) (digits 123)))
+  (is (equal '(1 2 3) (digits 123))))
 
 (test splice
   (and (multiple-value-bind (status lst)

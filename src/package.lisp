@@ -3,8 +3,8 @@
 (defpackage #:cl-project-euler-src
   (:use #:cl #:org.tfeb.hax.memoize #:split-sequence)
   (:shadow cl:cdr cl:mapcar)
-  (:export :range :fib :is-prime? :next-prime :is-palindrome? :base-10->k-string :square
-           :digits :splice :partition
+  (:export :range :fib :is-prime? :next-prime :primes-below :is-palindrome?
+           :base-10->k-string :square :digits :splice :partition
            :cdr :delay :force :repeat :mapcar :lazy-range :partial :str
            ;; prob001
            :merge-without-duplicates :multiples :sum-multiples-below :prob001
@@ -25,4 +25,6 @@
            ;; prob008
            :n-1000 :prob008
            ;; prob009
-           :is-pythagorean-triplet? :triplet :prob009))
+           :is-pythagorean-triplet? :triplet :prob009
+           ;; prob010
+           :prob010))
