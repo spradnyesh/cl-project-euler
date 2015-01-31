@@ -5,7 +5,7 @@
   :description "project euler solved in common-lisp"
   :author "Pradnyesh Sawant <spradnyesh@gmail.com>"
   :license ""
-  :depends-on (#:fiveam #:memoize)
+  :depends-on (#:fiveam #:memoize #:split-sequence)
   :components ((:module "src"
                         :components ((:file "package")
                                      (:file "utils" :depends-on ("package"))

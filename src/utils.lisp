@@ -41,6 +41,32 @@
 (defun square (n)
   (* n n))
 
+(defun digitps (num)
+  (do* ((n num (truncate (/ n 10)))
+        (rslt (list (rem n 10)) (push (rem n 10) rslt)))
+       ((< n 10) rslt)))
+
+;; https://github.com/spradnyesh/cl-web-utils/blob/master/src/list.lisp
+(defun splice (lst &key (from 0) (to (1- (length lst))))
+  (if (and lst
+           (>= from 0)
+           (>= to from)
+           (< to (length lst)))
+      (let ((rslt nil))
+        (dotimes (i (1+ (- to from)))
+          (push (nth (+ from i) lst) rslt))
+        (nreverse rslt))
+      (values nil lst)))
+
+;; http://clojuredocs.org/clojure.core/partition
+;; TODO: "pad"
+(defun partition (lst n &key (step 1) (pad nil))
+  (let* ((len (length lst)))
+    (loop for i = 0 then (+ i step)
+         for j = n then (+ j step)
+       while (<= j len)
+       collecting (splice lst :from i :to (1- j)))) )
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;; http://www.chadbraunduin.com/2011/07/common-lisp-currying.html
 

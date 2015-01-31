@@ -28,3 +28,29 @@
 
 (test square
   (is (= 25 (square 5))))
+
+(test digits
+  (is (equal '(1 2 3)) (digits 123)))
+
+(test splice
+  (and (multiple-value-bind (status lst)
+           (splice nil)
+         (and (is (null status))
+              (is (null lst))))
+       (multiple-value-bind (status lst)
+           (splice '(1 2 3) :from -1 :to 2)
+         (and (is (null status))
+              (is (equal lst '(1 2 3) ))))
+       (multiple-value-bind (status lst)
+           (splice '(1 2 3) :from 3 :to 2)
+         (and (is (null status))
+              (is (equal lst '(1 2 3) ))))
+       (multiple-value-bind (status lst)
+           (splice '(1 2 3) :from 0 :to 4)
+         (and (is (null status))
+              (is (equal lst '(1 2 3) ))))
+       (is (equal '(1 2 3) (splice '(0 1 2 3 4) :from 1 :to 3)))))
+
+(test partition
+  (and (is (equal '((1 2) (2 3) (3 4) (4 5)) (partition '(1 2 3 4 5) 2)))
+       (is (equal '((1 2) (3 4)) (partition '(1 2 3 4 5) 2 :step 2)))))

@@ -1,9 +1,10 @@
 ;;;; package.lisp
 
 (defpackage #:cl-project-euler-src
-  (:use #:cl #:org.tfeb.hax.memoize)
+  (:use #:cl #:org.tfeb.hax.memoize #:split-sequence)
   (:shadow cl:cdr cl:mapcar)
   (:export :range :fib :is-prime? :next-prime :is-palindrome? :base-10->k-string :square
+           :digits :splice :partition
            :cdr :delay :force :repeat :mapcar :lazy-range :partial :str
            ;; prob001
            :merge-without-duplicates :multiples :sum-multiples-below :prob001
@@ -20,4 +21,6 @@
            ;; prob006
            :prob006
            ;; prob007
-           :prob007))
+           :prob007
+           ;; prob007
+           :n-1000 :prob008))
